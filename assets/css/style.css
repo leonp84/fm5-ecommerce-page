@@ -48,6 +48,8 @@ body {
 .wrapper {
     margin: 18px 14px;
     padding-right: 40px;
+    max-width: 600px;
+
 }
 
 .container-box {
@@ -60,4 +62,34 @@ body {
 
 .cart-white {
     filter: invert(100%) sepia(5%) saturate(100%) hue-rotate(169deg) brightness(102%) contrast(0%);
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+    padding: 5px
+}
+
+.image-wrapper img {
+    height: 90px;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-image {
+        height: 450px;
+        background: url(../images/image-product-1.jpg) no-repeat center center / cover;
+        border-radius: 15px;
+    }
+
+    .container-box {
+        margin: 5px;
+
+    }
+
+    .wrapper {
+        margin-right: 100px;
+    }
+
 }
