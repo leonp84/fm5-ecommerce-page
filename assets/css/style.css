@@ -16,7 +16,7 @@ Black (75% opacity):    hsl(0, 0%, 0%) ;
 */
 
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
     margin: 0;
     padding: 0;
 }
@@ -24,9 +24,13 @@ Black (75% opacity):    hsl(0, 0%, 0%) ;
 body {
     font-family: "Kumbh Sans", sans-serif;
     font-size: 16px;
-    height: 1000px;
+    min-height: 100vh;
 }
 
+p {
+    font-size: 14px;
+    line-height: 150%;
+}
 
 .orange {
     color: hsl(26, 100%, 55%);
@@ -58,6 +62,7 @@ body {
     align-items: center;
     margin: 10px 10px 10px 10px;
     padding: 20px 30px;
+    height: 20px;
 }
 
 .cart-white {
@@ -76,9 +81,33 @@ body {
     border-radius: 5px;
 }
 
+.modal-backdrop {
+    background-color: transparent !important;
+}
+
+#show-cart {
+    width: 330px;
+    position: fixed;
+    top: 75px;
+    left: 5%;
+    
+}
+
+.offcanvas {
+    --bs-offcanvas-width: 250px;
+}
+
+footer {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
     .main-image {
-        height: 450px;
+        height: 400px;
         background: url(../images/image-product-1.jpg) no-repeat center center / cover;
         border-radius: 15px;
     }
@@ -89,7 +118,18 @@ body {
     }
 
     .wrapper {
-        margin-right: 100px;
+        margin-top: 50px;
+        margin-right: 50px;
     }
 
+    #avatar {
+        height: 40px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    #show-cart {
+        top: 80px;
+        left: 60%;
+    }
 }
