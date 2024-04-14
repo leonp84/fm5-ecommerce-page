@@ -51,7 +51,7 @@ li {
 }
 
 .main-image {
-    height: 250px;
+    width: 375px;
     /* background: url(../images/image-product-1.jpg) no-repeat center center / cover; */
 }
 

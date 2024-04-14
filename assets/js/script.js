@@ -11,12 +11,18 @@ $('#plus').on('click', function() {
 
 $('#minus').on('click', function() {
     if (itemNum != 0) {
-        itemNum--;
-    }
+        itemNum--; }
+
     updateItemNum()
 })
 
+$('.carousel-control-prev').on('click', function() {
+    $('.carousel').carousel('prev')
+})
 
+$('.carousel-control-next').on('click', function() {
+    $('.carousel').carousel('next')
+})
 
 $('#shopping-cart').on('click', function() {
     $('#show-cart').modal('show')
