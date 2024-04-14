@@ -16,8 +16,26 @@
 </head>
 
 <body>
+  <!-- Lightbow Modal -->
+  <div class="modal fade" id="lightbox" tabindex="-1" aria-labelledby="lightbox-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content lightbox-content">
+        <div class="main-image mt-2 md-rounded" id="main-image-lightbox"></div>
+          <div class="d-none d-xxl-flex image-wrapper lightbox-thumbs">
+            <div class='img-div' id="im1-1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div class='img-div' id="im2-2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg" alt="">
+            </div>
+            <div class='img-div' id="im3-3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg" alt="">
+            </div>
+            <div class='img-div' id="im4-4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Modal -->
+  <!-- Shopping Cart Modal -->
   <div class="modal" id="show-cart" tabindex="-1" aria-labelledby="show-cart-label" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -25,30 +43,17 @@
           <h1 class="modal-title fs-6 fw-bold" id="show-cart-label">Cart</h1>
           <span id="close-modal">X</span>
         </div>
-        <div class="modal-body">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div class="col-2">
-              <img src="assets/images/image-product-1-thumbnail.jpg" class="rounded" height="80" alt="">
-            </div>
-            <div class="col-5">
-              <span class="small">Fall Limited Edition Sneakers<br>$125.00 x 0 <strong>$0</strong></span>
-            </div>
-            <div class="col-1">
-              <img src="assets/images/icon-delete.svg" height="20" alt="">
-            </div>
-            <div class="col-11 d-flex mt-3 justify-content-center">
-              <div class="rounded container-box justify-content-center mt-2 orange-bg checkout-button">
-                <img src="assets/images/icon-cart-white.svg" class="me-1" alt="">
-                <span class="fw-bolder text-white ms-1">Checkout</span>
-              </div>
-            </div>
+        <div class="modal-body" id="shopping-cart-contents">
+          <!-- Javascript Shopping Cart -->
+          <div id="empty-cart">
+            Your Cart is empty
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- OffCanvas -->
+  <!-- OffCanvas Mobile Menu -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-menu" aria-labelledby="offcanvasLabel">
     <div class="offcanvas-header">
       <button type="button" class="btn-close mt-2 ms-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -81,7 +86,10 @@
             <a class="nav-link" href="#">Contact</a>
           </div>
           <div class="col d-flex justify-content-end align-items-center mt-1">
-            <img src="assets/images/icon-cart.svg" class="p-1" alt="Cart" id="shopping-cart">
+            <div>
+              <img src="assets/images/icon-cart.svg" class="p-1" alt="Cart" id="shopping-cart">
+              <span class="position-absolute top-10 start-55 translate-middle badge rounded-pill bg-warning" id="cart-items-number">0</span>
+            </div>
             <img src="assets/images/image-avatar.png" alt="Avatar" class="ps-2" height="30" id="avatar">
           </div>
         </div>
@@ -93,11 +101,11 @@
   <hr class="container-md col-xxl-8 d-none d-xxl-block">
   <main class="container col-xxl-8 mt-md-5 pt-md-4">
     <div class="row justify-content-evenly">
-      <div class="col-xxl-5">
+      <div class="col-xxl-5 d-flex justify-content-center d-xxl-block">
 
         <!-- Bootstrap Carousel -->
-        <div class="main-image mt-2  md-rounded d-flex justify-content-center" id="main-image">
-          <div id="carouselExampleControls" class="carousel slide d-block d-md-none" data-ride="carousel">
+        <div class="main-image mt-2 md-rounded" id="main-image">
+          <div id="carouselExampleControls" class="carousel slide d-block d-xxl-none" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img class="d-block w-100" src="assets/images/image-product-1.jpg" alt="First slide">
@@ -153,7 +161,7 @@
               <span class="fw-bolder" id="item-num-span">0</span>
               <img src="assets/images/icon-plus.svg" id='plus' width="15" height="15" alt="">
             </div>
-            <div class="col-xxl-5 rounded container-box justify-content-center mt-1 orange-bg">
+            <div class="col-xxl-5 rounded container-box justify-content-center mt-1 orange-bg" id="add-to-cart">
               <img src="assets/images/icon-cart-white.svg" class="me-1" alt="">
               <span class="fw-bolder text-white ms-1">Add to Cart</span>
             </div>

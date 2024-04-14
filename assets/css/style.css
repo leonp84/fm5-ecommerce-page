@@ -59,6 +59,11 @@ li {
     width: 375px;
 }
 
+.img-div {
+    background-color: white;
+    border-radius: 5px;;
+}
+
 #carouselExampleControls img {
     height: 250px;
     object-fit: cover;
@@ -100,10 +105,6 @@ li {
     border-radius: 5px;
 }
 
-.modal-backdrop {
-    background-color: transparent !important;
-}
-
 #show-cart {
     width: 330px;
     position: fixed;
@@ -132,9 +133,31 @@ footer {
     cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+.lightbox-content {
+    background-color: transparent;
+    border: none;
+}
+
+#add-to-cart {
+    cursor: pointer;
+}
+
+#cart-items-number {
+    display: none;
+}
+
+#empty-cart {
+    color:grey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+}
+
+@media screen and (min-width: 1400px) {
     .main-image {
         height: 400px;
+        width: 100%;
         background: url(../images/image-product-1.jpg) no-repeat center center / cover;
         border-radius: 15px;
     }
