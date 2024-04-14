@@ -2,10 +2,35 @@ let itemNum = 0
 let currentImage = 1
 
 $('#main-image').on('click', function () {
-    $('#lightbox').modal('show')
+    if (window.screen.width > 1400) {
+        $('#lightbox').modal('show')
+    }
 })
 
+$(".nav-link").hover(function () {
+    $(this).css('border-bottom', '9px solid hsl(26, 100%, 55%)');
+}, function () {
+    $(this).css('border-bottom', '9px solid transparent');
+});
+
+$("#avatar").hover(function () {
+    $(this).css('border', '3px solid hsl(26, 100%, 55%)');
+}, function () {
+    $(this).css('border', '3px solid transparent');
+});
+
+$(".img-p").on('mouseenter', function() {
+    if ($(this).css('opacity') !== '0.2') {
+        $(this).css('opacity', '0.5'); }
+});
+
+$(".img-p").on('mouseout', function() {
+    if ($(this).css('opacity') !== '0.2') {
+        $(this).css('opacity', '1') }
+}); 
+
 $('#close-lightbox').on('click', function () {
+
     $('#lightbox').modal('hide')
 })
 
@@ -53,11 +78,11 @@ $('#shopping-cart').on('click', function () {
 
 
 $('.carousel-control-prev').on('click', function () {
-    $('.carousel').carousel('prev')
+    $('#carouselExampleControls').carousel('prev')
 })
 
 $('.carousel-control-next').on('click', function () {
-    $('.carousel').carousel('next')
+    $('#carouselExampleControls').carousel('next')
 })
 
 
@@ -72,63 +97,61 @@ $('#menu-button').on('click', function () {
 });
 
 $('#im1').on('click', function () {
+    currentImage = 1;
+    callNumberFunction();
     $('.img-div').css('border', 'none')
     $('.img-p').css('opacity', '1')
-    $(this).children().css('opacity', '0.2')
-    $(this).css({
+    $('#im1').children().css('opacity', '0.2')
+    $('#im1').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
     })
     $('#main-image').css("background-image", "url('assets/images/image-product-1.jpg')");
-    currentImage = 1;
-    callNumberFunction();
 })
 
 $('#im2').on('click', function () {
+    currentImage = 2;
+    callNumberFunction();
     $('.img-div').css('border', 'none')
     $('.img-p').css('opacity', '1')
-    $(this).children().css('opacity', '0.2')
-    $(this).css({
+    $('#im2').children().css('opacity', '0.2')
+    $('#im2').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
     })
     $('#main-image').css("background-image", "url('assets/images/image-product-2.jpg')");
-    currentImage = 2;
-    callNumberFunction();
 })
 
 $('#im3').on('click', function () {
+    currentImage = 3;
+    callNumberFunction();
     $('.img-div').css('border', 'none')
     $('.img-p').css('opacity', '1')
-    $(this).children().css('opacity', '0.2')
-    $(this).css({
+    $('#im3').children().css('opacity', '0.2')
+    $('#im3').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
     })
     $('#main-image').css("background-image", "url('assets/images/image-product-3.jpg')");
-    currentImage = 3;
-    callNumberFunction();
 })
 
 $('#im4').on('click', function () {
+    currentImage = 4;
+    callNumberFunction();
     $('.img-div').css('border', 'none')
     $('.img-p').css('opacity', '1')
-    $(this).children().css('opacity', '0.2')
-    $(this).css({
+    $('#im4').children().css('opacity', '0.2')
+    $('#im4').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
     })
     $('#main-image').css("background-image", "url('assets/images/image-product-4.jpg')");
-    currentImage = 4;
-    callNumberFunction();
 })
 
 // ##########################################
 
 function showCurrentImage() {
-    console.log('Current Image = ' + currentImage)
     nextImage = `url('assets/images/image-product-${currentImage}.jpg')`
-    console.log('nextImage = ' + nextImage)
     $('#main-image-lightbox').css("background-image", nextImage);
 }
 
@@ -138,7 +161,7 @@ $('#lightbox-next').on('click', function () {
     } else {
         currentImage++;
     }
-    callNumberFunction ()
+    callNumberFunction()
 });
 
 $('#lightbox-prev').on('click', function () {
@@ -150,7 +173,7 @@ $('#lightbox-prev').on('click', function () {
     callNumberFunction();
 });
 
-function callNumberFunction () {
+function callNumberFunction() {
     switch (currentImage) {
         case 1:
             showOne();

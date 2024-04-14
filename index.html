@@ -26,13 +26,13 @@
         <div class="lightbox-button-prev" id="lightbox-prev"><img src="assets/images/icon-previous.svg" height="25" alt=""></div>
         <div class="main-image mt-2 md-rounded" id="main-image-lightbox"></div>
         <div class="d-none d-xxl-flex image-wrapper lightbox-thumbs">
-          <div class='img-divl' id="im1-1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg" alt="">
+          <div class='img-divl' id="im1-1"><img class='img-p pointer' src="assets/images/image-product-1-thumbnail.jpg" alt="">
           </div>
-          <div class='img-divl' id="im2-2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg" alt="">
+          <div class='img-divl' id="im2-2"><img class='img-p pointer' src="assets/images/image-product-2-thumbnail.jpg" alt="">
           </div>
-          <div class='img-divl' id="im3-3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg" alt="">
+          <div class='img-divl' id="im3-3"><img class='img-p pointer' src="assets/images/image-product-3-thumbnail.jpg" alt="">
           </div>
-          <div class='img-divl' id="im4-4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg" alt="">
+          <div class='img-divl' id="im4-4"><img class='img-p pointer' src="assets/images/image-product-4-thumbnail.jpg" alt="">
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
   </div>
 
   <div class="container-md col-lg-8">
-    <nav class="navbar navbar-expand justify-content-evenly pe-3 mt-md-3">
+    <nav class="navbar navbar-expand justify-content-evenly pb-0 pe-3 mt-md-3">
       <div class="row container-fluid justify-content-between">
         <div class="col d-flex align-items-center mt-1 ms-1">
           <img src="assets/images/icon-menu.svg" class="align-self-end d-block d-md-none" style="padding-bottom: 10px;"
@@ -91,19 +91,18 @@
           </div>
           <div class="col d-flex justify-content-end align-items-center mt-1">
             <div>
-              <img src="assets/images/icon-cart.svg" class="p-1" alt="Cart" id="shopping-cart">
+              <img src="assets/images/icon-cart.svg" class="p-1 pointer" alt="Cart" id="shopping-cart">
               <span class="position-absolute top-10 start-55 translate-middle badge rounded-pill bg-warning"
                 id="cart-items-number">0</span>
             </div>
-            <img src="assets/images/image-avatar.png" alt="Avatar" class="ps-2" height="30" id="avatar">
+            <img src="assets/images/image-avatar.png" alt="Avatar" class="ms-2 pointer" height="30" id="avatar">
           </div>
         </div>
       </div>
+    </nav>
   </div>
 
-
-  </nav>
-  <hr class="container-md col-xxl-8 d-none d-xxl-block">
+  <hr class="container col-xxl-8 d-none d-xxl-block mt-0">
   <main class="container col-xxl-8 mt-md-5 pt-md-4">
     <div class="row justify-content-evenly">
       <div class="col-xxl-5 d-flex justify-content-center d-xxl-block">
@@ -135,13 +134,13 @@
         </div>
 
         <div class="d-none d-xxl-flex image-wrapper">
-          <div class='img-div' id="im1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg" alt="">
           </div>
-          <div class='img-div' id="im2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg" alt="">
           </div>
-          <div class='img-div' id="im3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg" alt="">
           </div>
-          <div class='img-div' id="im4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg" alt="">
           </div>
         </div>
       </div>
@@ -162,9 +161,9 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-xxl-2 bg-body-secondary rounded  container-box">
-              <img src="assets/images/icon-minus.svg" id='minus' width="15" height="5" alt="">
+              <img src="assets/images/icon-minus.svg" id='minus' width="15" height="5" alt=""  class="pointer">
               <span class="fw-bolder" id="item-num-span">0</span>
-              <img src="assets/images/icon-plus.svg" id='plus' width="15" height="15" alt="">
+              <img src="assets/images/icon-plus.svg" id='plus' width="15" height="15" alt="" class="pointer">
             </div>
             <div class="col-xxl-5 rounded container-box justify-content-center mt-1 orange-bg" id="add-to-cart">
               <img src="assets/images/icon-cart-white.svg" class="me-1" alt="">
@@ -174,6 +173,7 @@
           </div>
         </div>
       </div>
+    </div>
   </main>
 
   <footer>
