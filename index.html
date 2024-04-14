@@ -16,21 +16,25 @@
 </head>
 
 <body>
-  <!-- Lightbow Modal -->
+  <!-- Lightbox Modal -->
   <div class="modal fade" id="lightbox" tabindex="-1" aria-labelledby="lightbox-label" aria-hidden="true">
+    <div id="my-backdrop"></div>
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content lightbox-content">
+        <div id="close-lightbox"><img src="assets/images/icon-close-orange.svg" alt=""></div>
+        <div class="lightbox-button" id="lightbox-next"><img src="assets/images/icon-next.svg" height="25" alt=""></div>
+        <div class="lightbox-button-prev" id="lightbox-prev"><img src="assets/images/icon-previous.svg" height="25" alt=""></div>
         <div class="main-image mt-2 md-rounded" id="main-image-lightbox"></div>
-          <div class="d-none d-xxl-flex image-wrapper lightbox-thumbs">
-            <div class='img-div' id="im1-1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg" alt="">
-            </div>
-            <div class='img-div' id="im2-2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg" alt="">
-            </div>
-            <div class='img-div' id="im3-3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg" alt="">
-            </div>
-            <div class='img-div' id="im4-4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg" alt="">
-            </div>
+        <div class="d-none d-xxl-flex image-wrapper lightbox-thumbs">
+          <div class='img-divl' id="im1-1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg" alt="">
           </div>
+          <div class='img-divl' id="im2-2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          <div class='img-divl' id="im3-3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          <div class='img-divl' id="im4-4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -88,7 +92,8 @@
           <div class="col d-flex justify-content-end align-items-center mt-1">
             <div>
               <img src="assets/images/icon-cart.svg" class="p-1" alt="Cart" id="shopping-cart">
-              <span class="position-absolute top-10 start-55 translate-middle badge rounded-pill bg-warning" id="cart-items-number">0</span>
+              <span class="position-absolute top-10 start-55 translate-middle badge rounded-pill bg-warning"
+                id="cart-items-number">0</span>
             </div>
             <img src="assets/images/image-avatar.png" alt="Avatar" class="ps-2" height="30" id="avatar">
           </div>

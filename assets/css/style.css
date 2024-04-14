@@ -51,8 +51,7 @@ li {
 }
 
 .main-image {
-    width: 375px;
-    /* background: url(../images/image-product-1.jpg) no-repeat center center / cover; */
+    width: 400px;
 }
 
 #carouselExampleControls {
@@ -60,8 +59,63 @@ li {
 }
 
 .img-div {
+    display: flex;
+    align-items: center;
     background-color: white;
-    border-radius: 5px;;
+    border: 3px solid transparent;
+    border-radius: 8px;
+}
+
+.img-divl {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+.img-div img {
+    object-fit: cover;
+}
+
+#my-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#close-lightbox {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.lightbox-button {
+    position: absolute;
+    right: -4%;
+    top: 40%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    padding: 5px 5px 10px 10px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.lightbox-button-prev {
+    position: absolute;
+    right: 97%;
+    top: 40%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    padding: 5px 8px 10px 6px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 #carouselExampleControls img {
@@ -122,6 +176,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -152,6 +207,10 @@ footer {
     align-items: center;
     justify-content: center;
     height: 130px;
+}
+
+.modal-backdrop {
+    background-color: transparent;
 }
 
 @media screen and (min-width: 1400px) {
