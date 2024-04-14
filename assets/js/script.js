@@ -16,9 +16,14 @@ $('#minus').on('click', function() {
     updateItemNum()
 })
 
+
+
 $('#shopping-cart').on('click', function() {
-    const modal = new bootstrap.Modal('#show-cart')
-    modal.show()
+    $('#show-cart').modal('show')
+});
+
+$('#close-modal').on('click', function() {
+    $('#show-cart').modal('hide')
 });
 
 $('#menu-button').on('click', function() {
