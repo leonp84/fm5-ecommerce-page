@@ -159,11 +159,12 @@ li {
 }
 
 #show-cart {
-    width: 330px;
+    width: 340px;
     position: fixed;
-    top: 75px;
-    left: 5%;
-    
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%);
+
 }
 
 .offcanvas {
@@ -185,6 +186,11 @@ footer {
 
 #close-modal {
     cursor: pointer;
+}
+
+.modal-dialog {
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .lightbox-content {
@@ -228,7 +234,6 @@ footer {
 
     .container-box {
         margin: 5px;
-
     }
 
     .wrapper {
@@ -243,7 +248,9 @@ footer {
     }
 
     #show-cart {
-        top: 80px;
-        left: 60%;
+        width: 340px;
+        position: fixed;
+        left: 65%;
+        top: 7%;
     }
 }

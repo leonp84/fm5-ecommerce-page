@@ -23,34 +23,21 @@
       <div class="modal-content lightbox-content">
         <div id="close-lightbox"><img src="assets/images/icon-close-orange.svg" alt=""></div>
         <div class="lightbox-button" id="lightbox-next"><img src="assets/images/icon-next.svg" height="25" alt=""></div>
-        <div class="lightbox-button-prev" id="lightbox-prev"><img src="assets/images/icon-previous.svg" height="25" alt=""></div>
+        <div class="lightbox-button-prev" id="lightbox-prev"><img src="assets/images/icon-previous.svg" height="25"
+            alt=""></div>
         <div class="main-image mt-2 md-rounded" id="main-image-lightbox"></div>
         <div class="d-none d-xxl-flex image-wrapper lightbox-thumbs">
-          <div class='img-divl' id="im1-1"><img class='img-p pointer' src="assets/images/image-product-1-thumbnail.jpg" alt="">
+          <div class='img-divl' id="im1-1"><img class='img-p pointer' src="assets/images/image-product-1-thumbnail.jpg"
+              alt="">
           </div>
-          <div class='img-divl' id="im2-2"><img class='img-p pointer' src="assets/images/image-product-2-thumbnail.jpg" alt="">
+          <div class='img-divl' id="im2-2"><img class='img-p pointer' src="assets/images/image-product-2-thumbnail.jpg"
+              alt="">
           </div>
-          <div class='img-divl' id="im3-3"><img class='img-p pointer' src="assets/images/image-product-3-thumbnail.jpg" alt="">
+          <div class='img-divl' id="im3-3"><img class='img-p pointer' src="assets/images/image-product-3-thumbnail.jpg"
+              alt="">
           </div>
-          <div class='img-divl' id="im4-4"><img class='img-p pointer' src="assets/images/image-product-4-thumbnail.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Shopping Cart Modal -->
-  <div class="modal" id="show-cart" tabindex="-1" aria-labelledby="show-cart-label" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-6 fw-bold" id="show-cart-label">Cart</h1>
-          <span id="close-modal">X</span>
-        </div>
-        <div class="modal-body" id="shopping-cart-contents">
-          <!-- Javascript Shopping Cart -->
-          <div id="empty-cart">
-            Your Cart is empty
+          <div class='img-divl' id="im4-4"><img class='img-p pointer' src="assets/images/image-product-4-thumbnail.jpg"
+              alt="">
           </div>
         </div>
       </div>
@@ -94,6 +81,23 @@
               <img src="assets/images/icon-cart.svg" class="p-1 pointer" alt="Cart" id="shopping-cart">
               <span class="position-absolute top-10 start-55 translate-middle badge rounded-pill bg-warning"
                 id="cart-items-number">0</span>
+              <!-- Shopping Cart Modal -->
+              <div class="modal" id="show-cart" tabindex="-1" aria-labelledby="show-cart-label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-6 fw-bold" id="show-cart-label">Cart</h1>
+                      <span id="close-modal">X</span>
+                    </div>
+                    <div class="modal-body" id="shopping-cart-contents">
+                      <!-- Javascript Shopping Cart -->
+                      <div id="empty-cart">
+                        Your Cart is empty
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <img src="assets/images/image-avatar.png" alt="Avatar" class="ms-2 pointer" height="30" id="avatar">
           </div>
@@ -134,13 +138,17 @@
         </div>
 
         <div class="d-none d-xxl-flex image-wrapper">
-          <div class='img-div pointer' id="im1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im1"><img class='img-p' src="assets/images/image-product-1-thumbnail.jpg"
+              alt="">
           </div>
-          <div class='img-div pointer' id="im2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im2"><img class='img-p' src="assets/images/image-product-2-thumbnail.jpg"
+              alt="">
           </div>
-          <div class='img-div pointer' id="im3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im3"><img class='img-p' src="assets/images/image-product-3-thumbnail.jpg"
+              alt="">
           </div>
-          <div class='img-div pointer' id="im4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg" alt="">
+          <div class='img-div pointer' id="im4"><img class='img-p' src="assets/images/image-product-4-thumbnail.jpg"
+              alt="">
           </div>
         </div>
       </div>
@@ -161,7 +169,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-xxl-2 bg-body-secondary rounded  container-box">
-              <img src="assets/images/icon-minus.svg" id='minus' width="15" height="5" alt=""  class="pointer">
+              <img src="assets/images/icon-minus.svg" id='minus' width="15" height="5" alt="" class="pointer">
               <span class="fw-bolder" id="item-num-span">0</span>
               <img src="assets/images/icon-plus.svg" id='plus' width="15" height="15" alt="" class="pointer">
             </div>

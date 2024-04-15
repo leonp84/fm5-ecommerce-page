@@ -1,11 +1,11 @@
-let itemNum = 0
-let currentImage = 1
+let itemNum = 0;
+let currentImage = 1;
 
 $('#main-image').on('click', function () {
     if (window.screen.width > 1400) {
-        $('#lightbox').modal('show')
+        $('#lightbox').modal('show');
     }
-})
+});
 
 $(".nav-link").hover(function () {
     $(this).css('border-bottom', '9px solid hsl(26, 100%, 55%)');
@@ -21,137 +21,126 @@ $("#avatar").hover(function () {
 
 $(".img-p").on('mouseenter', function() {
     if ($(this).css('opacity') !== '0.2') {
-        $(this).css('opacity', '0.5'); }
+        $(this).css('opacity', '0.5');
+    }
 });
 
 $(".img-p").on('mouseout', function() {
     if ($(this).css('opacity') !== '0.2') {
-        $(this).css('opacity', '1') }
-}); 
+        $(this).css('opacity', '1');
+    }
+});
 
 $('#close-lightbox').on('click', function () {
-
-    $('#lightbox').modal('hide')
-})
+    $('#lightbox').modal('hide');
+});
 
 function updateItemNum() {
-    $('#item-num-span').text(itemNum)
+    $('#item-num-span').text(itemNum);
 }
 
 $('#plus').on('click', function () {
     itemNum++;
-    updateItemNum()
-})
+    updateItemNum();
+});
 
 $('#minus').on('click', function () {
     if (itemNum != 0) {
         itemNum--;
     }
-    updateItemNum()
-})
+    updateItemNum();
+});
 
 $('#add-to-cart').on('click', function () {
     if (parseInt($('#item-num-span').text()) > 0) {
         $('#cart-items-number').text(parseInt($('#cart-items-number').text()) + itemNum);
         $('#cart-items-number').css('display', 'inline-block');
         $('#item-num-span').text('0');
-        $('#shopping-cart-contents').html(itemsInCart())
+        $('#shopping-cart-contents').html(itemsInCart());
         $('#empty-my-cart').on('click', function () {
             $('#shopping-cart-contents').html(emptyCart);
             $('#cart-items-number').css('display', 'none');
             $('#cart-items-number').text('0');
-        })
+        });
     }
-    itemNum = 0
-})
-
-
-
-
-
-
-// ##########################################
-
-$('#shopping-cart').on('click', function () {
-    $('#show-cart').modal('show')
+    itemNum = 0;
 });
 
+$('#shopping-cart').on('click', function () {
+    $('#show-cart').modal('show');
+});
 
 $('.carousel-control-prev').on('click', function () {
-    $('#carouselExampleControls').carousel('prev')
-})
+    $('#carouselExampleControls').carousel('prev');
+});
 
 $('.carousel-control-next').on('click', function () {
-    $('#carouselExampleControls').carousel('next')
-})
-
-
+    $('#carouselExampleControls').carousel('next');
+});
 
 $('#close-modal').on('click', function () {
-    $('#show-cart').modal('hide')
+    $('#show-cart').modal('hide');
 });
 
 $('#menu-button').on('click', function () {
-    const bsOffcanvas = new bootstrap.Offcanvas('#mobile-menu')
-    bsOffcanvas.show()
+    const bsOffcanvas = new bootstrap.Offcanvas('#mobile-menu');
+    bsOffcanvas.show();
 });
 
 $('#im1').on('click', function () {
     currentImage = 1;
     callNumberFunction();
-    $('.img-div').css('border', 'none')
-    $('.img-p').css('opacity', '1')
-    $('#im1').children().css('opacity', '0.2')
+    $('.img-div').css('border', 'none');
+    $('.img-p').css('opacity', '1');
+    $('#im1').children().css('opacity', '0.2');
     $('#im1').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     $('#main-image').css("background-image", "url('assets/images/image-product-1.jpg')");
-})
+});
 
 $('#im2').on('click', function () {
     currentImage = 2;
     callNumberFunction();
-    $('.img-div').css('border', 'none')
-    $('.img-p').css('opacity', '1')
-    $('#im2').children().css('opacity', '0.2')
+    $('.img-div').css('border', 'none');
+    $('.img-p').css('opacity', '1');
+    $('#im2').children().css('opacity', '0.2');
     $('#im2').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     $('#main-image').css("background-image", "url('assets/images/image-product-2.jpg')");
-})
+});
 
 $('#im3').on('click', function () {
     currentImage = 3;
     callNumberFunction();
-    $('.img-div').css('border', 'none')
-    $('.img-p').css('opacity', '1')
-    $('#im3').children().css('opacity', '0.2')
+    $('.img-div').css('border', 'none');
+    $('.img-p').css('opacity', '1');
+    $('#im3').children().css('opacity', '0.2');
     $('#im3').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     $('#main-image').css("background-image", "url('assets/images/image-product-3.jpg')");
-})
+});
 
 $('#im4').on('click', function () {
     currentImage = 4;
     callNumberFunction();
-    $('.img-div').css('border', 'none')
-    $('.img-p').css('opacity', '1')
-    $('#im4').children().css('opacity', '0.2')
+    $('.img-div').css('border', 'none');
+    $('.img-p').css('opacity', '1');
+    $('#im4').children().css('opacity', '0.2');
     $('#im4').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     $('#main-image').css("background-image", "url('assets/images/image-product-4.jpg')");
-})
-
-// ##########################################
+});
 
 function showCurrentImage() {
-    nextImage = `url('assets/images/image-product-${currentImage}.jpg')`
+    let nextImage = `url('assets/images/image-product-${currentImage}.jpg')`;
     $('#main-image-lightbox').css("background-image", nextImage);
 }
 
@@ -161,7 +150,7 @@ $('#lightbox-next').on('click', function () {
     } else {
         currentImage++;
     }
-    callNumberFunction()
+    callNumberFunction();
 });
 
 $('#lightbox-prev').on('click', function () {
@@ -193,65 +182,62 @@ function callNumberFunction() {
 $('#im1-1').on('click', showOne);
 
 function showOne() {
-    $('.img-divl').css('border', '3px solid black')
-    $('.img-p').css('opacity', '1')
-    $('#im1-1').children().css('opacity', '0.2')
+    $('.img-divl').css('border', '3px solid black');
+    $('.img-p').css('opacity', '1');
+    $('#im1-1').children().css('opacity', '0.2');
     $('#im1-1').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     currentImage = 1;
     showCurrentImage();
 }
 
 $('#im2-2').on('click', showTwo);
 
-
 function showTwo() {
-    $('.img-divl').css('border', '3px solid black')
-    $('.img-p').css('opacity', '1')
-    $('#im2-2').children().css('opacity', '0.2')
+    $('.img-divl').css('border', '3px solid black');
+    $('.img-p').css('opacity', '1');
+    $('#im2-2').children().css('opacity', '0.2');
     $('#im2-2').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     currentImage = 2;
-    showCurrentImage()
+    showCurrentImage();
 }
 
 $('#im3-3').on('click', showThree);
 
 function showThree() {
-    $('.img-divl').css('border', '3px solid black')
-    $('.img-p').css('opacity', '1')
-    $('#im3-3').children().css('opacity', '0.2')
+    $('.img-divl').css('border', '3px solid black');
+    $('.img-p').css('opacity', '1');
+    $('#im3-3').children().css('opacity', '0.2');
     $('#im3-3').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     currentImage = 3;
-    showCurrentImage()
+    showCurrentImage();
 }
 
 $('#im4-4').on('click', showFour);
 
 function showFour() {
-    $('.img-divl').css('border', '3px solid black')
-    $('.img-p').css('opacity', '1')
-    $('#im4-4').children().css('opacity', '0.2')
+    $('.img-divl').css('border', '3px solid black');
+    $('.img-p').css('opacity', '1');
+    $('#im4-4').children().css('opacity', '0.2');
     $('#im4-4').css({
         'border': '3px solid hsl(26, 100%, 55%)',
         'border-radius': '8px'
-    })
+    });
     currentImage = 4;
-    showCurrentImage()
+    showCurrentImage();
 }
 
-// ####################################################
-
 function itemsInCart() {
-    total = parseInt($('#cart-items-number').text());
-    totalText = `
+    let total = parseInt($('#cart-items-number').text());
+    let totalText = `
     <div class="row d-flex justify-content-between align-items-center">
     <div class="col-2">
         <img src="assets/images/image-product-1-thumbnail.jpg" class="rounded" height="80" alt="">
@@ -269,11 +255,11 @@ function itemsInCart() {
         <span class="fw-bolder text-white ms-1">Checkout</span>
         </div>
     </div>
-    </div>`
-    return totalText
+    </div>`;
+    return totalText;
 }
 
-emptyCart = `
+let emptyCart = `
 <div id="empty-cart">
 Your Cart is empty
-</div>`
+</div>`;
